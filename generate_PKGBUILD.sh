@@ -3,7 +3,7 @@
 # Create a temporary directory
 tmpdir=$(mktemp -d)
 
-# Download the moonbit tar.gz file
+# Download the moonbit tar.gz files
 curl -L https://cli.moonbitlang.cn/binaries/latest/moonbit-linux-x86_64.tar.gz -o "$tmpdir/moonbit-linux-x86_64.tar.gz"
 
 # Extract the tar.gz file
