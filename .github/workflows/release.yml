@@ -16,6 +16,11 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
+      - name: Setup DNS
+        run: |
+          sudo sed -i '1i nameserver 223.5.5.5\nnameserver 223.6.6.6' /etc/resolv.conf
+          cat /etc/resolv.conf
+
       - name: Update PKGBUILD
         run: |
           chmod +x generate_PKGBUILD.sh || true
